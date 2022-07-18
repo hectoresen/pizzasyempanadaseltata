@@ -1,0 +1,98 @@
+.header{
+    width: 100%;
+    display: flex;
+    max-height: 10vh;
+    background-image: linear-gradient(to right top, #26201c, #29221f, #2d2521, #302724, #342a27);
+    color: white;
+    &__logo{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 90%;
+            height: 90%;
+        }
+    }
+    &__nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__mobile{
+            display: none;
+        }
+        &-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: white;
+                width: 100%;
+                height: 100%;
+                font-size: 1.15rem;
+                span {
+                    color: orange;
+                    font-size: 1.2rem;
+                }
+            }
+            p:hover{
+                transition: 0.4s;
+                cursor: pointer;
+                color: orange;
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+/* @media screen and (max-width: 480px) {
+    .header{
+        width: 100vw;
+        max-height: 20vh;
+        &__logo{
+            display: none;
+        }
+        &__nav{
+            width: 100%;
+            flex-direction: column;
+            margin-top: 2%;
+            &-item{
+                height: 5vh;
+                width: 100%;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+} */
+
+@media screen and (max-width: 480px) {
+    .header{
+        width: 100vw;
+        max-height: 20vh;
+        &__nav{
+            width: 100%;
+            flex-direction: column;
+            &__mobile{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-btn{
+                    font-size: 2rem;
+                }
+            }
+            &-item{
+                display: none;
+                height: 5vh;
+                width: 100%;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
