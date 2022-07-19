@@ -1,0 +1,11 @@
+.pizzamenu{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    &__pizza{
+        margin: 1%;
+        border: 1px solid black;
+    }
+}

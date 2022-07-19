@@ -1,6 +1,4 @@
-@media screen and (min-width: 480px) {
 
-    *,
     *::before,
     *::after {
         box-sizing: border-box;
@@ -15,22 +13,23 @@
         font-size: 3vmin;
         margin-top: 25px;
         margin-bottom: 25px;
-
+        
     }
-
+    
     .carousel-container {
         background: #151515;
         color: #fff;
         overflow: hidden;
     }
-
+    
     .carousel-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+    
     .slides {
+        position: relative;
         display: grid;
 
         >.slide {
@@ -160,4 +159,3 @@
             }
         }
     }
-}
