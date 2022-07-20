@@ -57,6 +57,7 @@
             }
             &-item:hover{
                 cursor: pointer;
+                color: orange;
             }
             span {
                 font-size: 1.2rem;
@@ -65,6 +66,5 @@
     }
     &__foodmenu{
         margin-top: 1%;
-        border: 1px solid black;
     }
 }

@@ -1,0 +1,11 @@
+.products__prices{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &-price{
+        p {
+            margin: -1%;
+        }
+    }
+}
