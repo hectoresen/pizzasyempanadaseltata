@@ -1,4 +1,5 @@
 import React from 'react';
+import Prices from '../Prices/Prices';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,13 +7,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './Pizza.scss';
-import Prices from '../Prices/Prices';
 
 const Pizza = () => {
     const pizzaList = [
         {
             Name: 'Maldonado',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella, jamón serrano y pollo desmenuzado',
             Prices: [
                 {Porción: '2 €'},{Mediana: '8.60 €'},{Grande: '11.80 €'}
@@ -20,7 +20,7 @@ const Pizza = () => {
         },
         {
             Name: 'Rocha',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella, aceitunas y salchichón',
             Prices: [
                 {Porción: '2 €'},{Mediana: '8.60 €'},{Grande: '11.80 €'}
@@ -28,7 +28,7 @@ const Pizza = () => {
         },
         {
             Name: 'Paysandú',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella, aceitunas piquillo y bacon',
             Prices: [
                 {Porción: '2 €'},{Mediana: '9.50 €'},{Grande: '12.60 €'}
@@ -36,7 +36,7 @@ const Pizza = () => {
         },
         {
             Name: 'Florida',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella, queso de cabra, jamón serrano y tomate',
             Prices: [
                 {Porción: '2 €'},{Mediana: '9.80 €'},{Grande: '12.60 €'}
@@ -44,7 +44,7 @@ const Pizza = () => {
         },
         {
             Name: 'Montevideo',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Quesos: Mozarella, emmental, oveja y cabra',
             Prices: [
                 {Porción: '2 €'},{Mediana: '9.80 €'},{Grande: '12.60 €'}
@@ -52,7 +52,7 @@ const Pizza = () => {
         },
         {
             Name: 'Vegetal',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella, pimientos rojo y verde, champiñones y aceitunas',
             Prices: [
                 {Porción: '2 €'},{Mediana: '8.50 €'},{Grande: '12.20 €'}
@@ -60,20 +60,19 @@ const Pizza = () => {
         },
         {
             Name: 'Vegana',
-            Img: 'https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE',
+            Img: 'https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013',
             Ingredients: 'Mozarella vegana, champiñones, pimiento y cebolla',
             Prices: [
                 {Porción: '2 €'},{Mediana: '9.50 €'},{Grande: '12.20 €'}
             ]
         },
-
     ];
 
     return (
         <div className='pizzamenu'>
             {pizzaList.map(element =>{
                 return <div className='pizzamenu__pizza' key={element.Name}>
-                        <Card sx={{ maxWidth: 240 }}>
+                        <Card sx={{ maxWidth: 240, minHeight: 420 }}>
                             <CardMedia
                                 component="img"
                                 height="140"
@@ -84,11 +83,11 @@ const Pizza = () => {
                                 <Typography gutterBottom variant="h5" component="div">
                                     {element.Name}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary" fontStyle="italic">
+                                <Typography variant="body3" color="text.secondary" fontStyle="italic">
                                     {element.Ingredients}
                                 </Typography>
                                 <div className='pizzamenu__pizza__prices'>
-                                    <Prices pizzaPrices={element.Prices} />
+                                    <Prices productPrices={element.Prices} />
                                 </div>
                             </CardContent>
 {/*                             <CardActions>

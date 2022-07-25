@@ -66,5 +66,18 @@
     }
     &__foodmenu{
         margin-top: 1%;
+        position: relative;
+        &-close{
+            position: absolute;
+            color: #B12C29;
+            font-size: 1.5rem;
+            right: 0;
+            margin-right: 1%;
+        }
+        &-close:hover{
+            cursor: pointer;
+            transition: 0.2s;
+            color: orange;
+        }
     }
 }

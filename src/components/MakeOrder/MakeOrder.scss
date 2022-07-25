@@ -1,0 +1,13 @@
+.makeorder{
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &__qr{
+        border: 1px solid red;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

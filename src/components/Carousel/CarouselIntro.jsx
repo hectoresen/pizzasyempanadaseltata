@@ -9,19 +9,19 @@ const slides = [
     title: "Empanadas y empanadillas",
     subtitle: "Enteras o porciones",
     image:
-      "https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/209290430_169364441919154_6614498174943569325_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a26aad&_nc_ohc=bNY1KLxHbnwAX9TEKtZ&tn=k-ozwcOQz76gndu6&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT_b2p7_y5PbYzpD4Ddv69hVrVk2mhNZOleqndR9PTzl7A&oe=62DA217E"
+      "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg"
   },
   {
     title: "Pizzas",
     subtitle: "Enteras o porciones",
     image:
-      "https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/208312047_169364428585822_6699304822989092132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a26aad&_nc_ohc=XD5MPX5uLCcAX9vuZhI&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT8WJwoeUBK5vJE6nEscbjqlhTawyLP2ksbpT8adbsk_nQ&oe=62DAC3DE"
+      "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013"
   },
   {
     title: "Postres",
     subtitle: "100% caseros",
     image:
-      "https://scontent.fvgo1-1.fna.fbcdn.net/v/t39.30808-6/258071648_262454845943446_5449838944429126748_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=LF2s1AlnMxkAX_-Rbua&_nc_ht=scontent.fvgo1-1.fna&oh=00_AT9K9sKJuxxqRAAEwwaCbD1zuYMh6sO4AQRxKXe5obb5-g&oe=62DB2777"
+      "https://cdn.discordapp.com/attachments/964479986855706624/1001133577972502619/210115506_169364425252489_8581609915645560438_n.jpg"
   },
 ];
 
