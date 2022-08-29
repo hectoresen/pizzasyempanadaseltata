@@ -1,4 +1,4 @@
-import { CarouselIntro, Header, MakeOrder, Menu } from './components';
+import { CarouselIntro, Header, MakeOrder, Menu, WhereWeAre } from './components';
 import './App.scss';
 
 function App() {
@@ -11,11 +11,14 @@ function App() {
         <section className='eltata__content-carousel'>
           <CarouselIntro />
         </section>
-        <section className='eltata__content-menu'>
+        <section className='eltata__content-menu' id='eltata__content-menu'>
           <Menu />
         </section>
-        <section className='eltata__makeorder'>
+        <section className='eltata__content-makeorder'>
           <MakeOrder />
+        </section>
+        <section className='eltata__content-whereweare'>
+          <WhereWeAre />
         </section>
       </main>
 

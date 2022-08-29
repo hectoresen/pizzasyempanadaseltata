@@ -11,8 +11,12 @@
         }
         &__prices{
             display: flex;
-            justify-content: space-around;
+            text-align: center;
             flex-direction: column;
+        }
+        &__ingredients{
+            display: flex;
+            justify-content: center;
         }
     }
 }

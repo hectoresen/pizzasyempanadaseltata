@@ -1,0 +1,14 @@
+.whereweare{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    hr {
+        width: 100%;
+        border-top: 2px solid black;
+    }
+    &__map{
+        margin-top: 5%;
+    }
+}

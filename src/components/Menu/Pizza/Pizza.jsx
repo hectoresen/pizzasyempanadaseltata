@@ -84,7 +84,9 @@ const Pizza = () => {
                                     {element.Name}
                                 </Typography>
                                 <Typography variant="body3" color="text.secondary" fontStyle="italic">
+                                    <div className='pizzamenu__pizza__ingredients'>
                                     {element.Ingredients}
+                                    </div>
                                 </Typography>
                                 <div className='pizzamenu__pizza__prices'>
                                     <Prices productPrices={element.Prices} />

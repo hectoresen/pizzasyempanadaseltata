@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import logoTata from '../../assets/pruebalogo.svg';
+import { whereweare, letter } from './nav';
 import  {AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineLocalOffer, MdOutlineFastfood } from 'react-icons/md';
+import logoTata from '../../assets/pruebalogo.svg';
 import { BiMap } from 'react-icons/bi';
 import "animate.css";
 import './Header.scss';
@@ -31,10 +32,10 @@ const Header = () => {
                 <p> <span><MdOutlineLocalOffer /></span> Ofertas</p>
             </div>
             <div className='header__nav-item'>
-                <p> <span><MdOutlineFastfood /></span> Carta</p>
+                <p onClick={letter}> <span><MdOutlineFastfood /></span> Carta</p>
             </div>
             <div className='header__nav-item'>
-                <p> <span><BiMap /></span> Dónde estamos</p>
+                <p onClick={whereweare}> <span><BiMap /></span> Dónde estamos</p>
             </div>
         </div>
     </div>
