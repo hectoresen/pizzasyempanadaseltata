@@ -1,9 +1,10 @@
-import { CarouselIntro, Header, MakeOrder, Menu, WhereWeAre } from './components';
+import { CarouselIntro, Cart, Header, MakeOrder, Menu, WhereWeAre } from './components';
 import './App.scss';
 
 function App() {
   return (
     <div className="eltata">
+      <Cart />
       <header className='eltata__header'>
         <Header />
       </header>

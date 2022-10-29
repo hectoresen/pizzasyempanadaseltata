@@ -1,161 +1,37 @@
-
-    *::before,
-    *::after {
-        box-sizing: border-box;
-        position: relative;
+.carousel{
+    width: 100%;
+    height: 100%;
+    &__slides{
+        &-patty, &-pizza, &-desserts{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
     }
-
-    .carousel-container {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        font-size: 3vmin;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        
-    }
-    
-    .carousel-container {
-        background: #151515;
-        color: #fff;
-        overflow: hidden;
-    }
-    
-    .carousel-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .slides {
-        position: relative;
-        display: grid;
-
-        >.slide {
-            grid-area: 1 / -1;
+        &-patty{
+            background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg');
         }
-
-        >button {
-            appearance: none;
-            background: transparent;
-            border: none;
-            color: white;
-            position: absolute;
-            font-size: 5rem;
-            width: 5rem;
-            height: 5rem;
-            top: 30%;
-            transition: opacity 0.3s;
-            opacity: 0.7;
-            z-index: 5;
-
-            &:hover {
-                opacity: 1;
-            }
-
-            &:focus {
-                outline: none;
-            }
-
-            &:first-child {
-                left: -50%;
-            }
-
-            &:last-child {
-                right: -50%;
-            }
+        &-pizza{
+            background-image: url('https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013');
+        }
+        &-desserts{
+            background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133577972502619/210115506_169364425252489_8581609915645560438_n.jpg');
         }
     }
+}
 
+.slidebackground{
+    position: fixed;
+    /* ACORDARSE PARA PROBAR TOP1 TEST BG */
+    top: 0;
+    left: -10%;
+    right: -10%;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s linear, transform 0.3s ease-in-out;
+    pointer-events: none;
 
-
-    .slideContent {
-        width: 30vw;
-        height: 40vw;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        transition: transform 0.5s ease-in-out;
-        opacity: 0.7;
-        display: grid;
-        align-content: center;
-        transform-style: preserve-3d;
-        transform: perspective(1000px) translateX(calc(120% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
-    }
-
-    .slideContentInner {
-        transform-style: preserve-3d;
-        transform: translateZ(2rem);
-        transition: opacity 0.3s linear;
-        text-shadow: 0 0.1rem 1rem #000;
-        opacity: 0;
-        padding: 2%;
-
-        .slideSubtitle {
-            font-size: 1.5rem;
-        }
-
-        .slideTitle {
-            font-size: 1.9rem;
-            font-weight: normal;
-            letter-spacing: 0.2ch;
-            margin: 0;
-        }
-
-        .slideSubtitle::before {
-            content: "— ";
-        }
-
-        .slideDescription {
-            margin: 0;
-            font-size: 0.8rem;
-            letter-spacing: 0.2ch;
-        }
-    }
-
-    .slideBackground {
-        position: fixed;
-        /* ACORDARSE PARA PROBAR TOP1 TEST BG */
-        top: 0;
-        left: -10%;
-        right: -10%;
-        bottom: 0;
-        background-size: cover;
-        background-position: center center;
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s linear, transform 0.3s ease-in-out;
-        pointer-events: none;
-
-        transform: translateX(calc(10% * var(--dir)));
-    }
-
-    .slide[data-active] {
-        /* ACTIVO */
-        z-index: 2;
-        pointer-events: auto;
-
-        .slideBackground {
-            opacity: 0.2;
-            transform: none;
-        }
-
-        .slideContentInner {
-            opacity: 1;
-        }
-
-        .slideContent {
-            --x: calc(var(--px) - 0.5);
-            --y: calc(var(--py) - 0.5);
-            opacity: 1;
-
-            transform: perspective(1000px);
-
-            &:hover {
-                cursor: pointer;
-                transition: none;
-                transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
-            }
-        }
-    }
+    transform: translateX(calc(10% * var(--dir)));
+}

@@ -1,0 +1,197 @@
+{
+    "dessertsList" : [
+        {
+            "name": "Filloas rellenas",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Miel, nutella, dulce de leche..",
+            "types": "Unidad",
+            "price": "1 €"
+        },
+        {
+            "name": "Alfajores",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "",
+            "types": "Unidad",
+            "price": "2 €"
+        },
+        {
+            "name": "Tosta de ricotta",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "",
+            "types": "Porción",
+            "price": "1,50 €"
+        },
+        {
+            "name": "Pasta frola",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "",
+            "types": "Unidad",
+            "price": "2 €"
+        }
+    ],
+    "pattyList": [
+        {
+            "name": "Ternera",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Empanada de ternera",
+            "prices": [
+                {
+                    "Empanada Kg": "9.90 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Pollo",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Empanada de Pollo",
+            "prices": [
+                {
+                    "Empanada Kg": "9.90 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Atún",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Empanada de Atún",
+            "prices": [
+                {
+                    "Empanada Kg": "9.90 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Bacon",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Empanada de Bacon",
+            "prices": [
+                {
+                    "Empanada Kg": "8.30 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Jamón y queso",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Emapanada de Jamón y queso",
+            "prices": [
+                {
+                    "Empanada Kg": "8.30 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Pascualina",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Espinacas, acelgas, huevo, cebolla y pimiento",
+            "prices": [
+                {
+                    "Empanada Kg": "8.30 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        },
+        {
+            "name": "Vegana",
+            "img": "https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg",
+            "ingredients" : "Espinacas, cebolla, pimiento y queso vegano",
+            "prices": [
+                {
+                    "Empanada Kg": "9.90 €",
+                    "Unidad" : "1.50 €"
+                }
+            ]
+        }
+    ],
+    "pizzalist": [
+        {
+            "name": "Maldonado",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella, jamón serrano y pollo desmenuzado",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "8.60 €",
+                    "Grande" : "11.80 €"
+                }
+            ]
+        },
+        {
+            "name": "Rocha",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella, aceitunas y salchichón",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "8.60 €",
+                    "Grande" : "11.80 €"
+                }
+            ]
+        },
+        {
+            "name": "Paysandú",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella, aceitunas piquillo y bacon",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "9.50 €",
+                    "Grande" : "12.60 €"
+                }
+            ]
+        },
+        {
+            "name": "Florida",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella, queso de cabra, jamón serrano y tomate",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "9.80 €",
+                    "Grande" : "12.60 €"
+                }
+            ]
+        },
+        {
+            "name": "Montevideo",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Quesos: Mozarella, emmental, oveja y cabra",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "9.80 €",
+                    "Grande" : "12.60 €"
+                }
+            ]
+        },
+        {
+            "name": "Vegetal",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella, pimientos rojo y verde, champiñones y aceitunas",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "8.50 €",
+                    "Grande" : "12.60 €"
+                }
+            ]
+        },
+        {
+            "name": "Vegana",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "ingredients" : "Mozarella vegana, champiñones, pimiento y cebolla",
+            "prices": [
+                {
+                    "Porción" : "2 €",
+                    "Mediana": "9.50 €",
+                    "Grande" : "12.20 €"
+                }
+            ]
+        }
+    ]
+}
