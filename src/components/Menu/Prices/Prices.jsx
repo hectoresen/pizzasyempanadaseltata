@@ -39,8 +39,9 @@ const Prices = (props) => {
             }
             </Dropdown.Menu>
         </Dropdown>
-        {/* Botón que pedir que enviaría los valores de lo elegido */}
-        <Grid.Container gap={10}>
+        <Grid.Container gap={2} justify="center">
+            <div>
+            </div>
             <Grid>
                 <Button
                     shadow
@@ -52,15 +53,7 @@ const Prices = (props) => {
                 </Button>
             </Grid>
         </Grid.Container>
-
     </div>
-/*         return props.productPrices.map((product, index) =>{
-            return <div className='products__prices' key={index}>
-                    <div className='products__prices-price'>
-                        <p><span>{Object.keys(product)}:</span> {Object.values(product)}</p>
-                    </div>
-            </div>
-        }) */
     }
 
 export default Prices;

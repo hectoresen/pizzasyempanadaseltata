@@ -13,5 +13,5 @@ export {
     MakeOrder,
     WhereWeAre,
     Cart,
-    FoodCard
+    FoodCard,
 }
