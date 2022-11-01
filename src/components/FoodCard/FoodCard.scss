@@ -1,0 +1,22 @@
+.foodCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    &__content{
+        margin: 1%;
+        img {
+            border-radius: 5%;
+        }
+        &__prices{
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__ingredients{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

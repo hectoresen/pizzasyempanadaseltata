@@ -3,13 +3,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    &-price{
-        p {
-            font-size: 0.95rem;
-            margin: -1%;
-            span {
-                color: orange;
-            }
-        }
-    }
+/*     border: 1px solid red; */
+}
+
+.productNameSelected{
+    display: none;
 }

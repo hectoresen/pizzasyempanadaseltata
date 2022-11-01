@@ -4,6 +4,7 @@ import Menu from "./Menu/Menu";
 import MakeOrder from "./MakeOrder/MakeOrder";
 import WhereWeAre from "./WhereWeAre/WhereWeAre";
 import Cart from "./Cart/Cart";
+import FoodCard from "./FoodCard/FoodCard";
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     Menu,
     MakeOrder,
     WhereWeAre,
-    Cart
+    Cart,
+    FoodCard
 }
