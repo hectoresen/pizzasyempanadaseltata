@@ -15,9 +15,9 @@ const FoodCard = ({ food }) => {
                 {food
                     ? food.map((element) => {
                         return (
-                            <Grid xs={5} style={{ margin: '2%' }} >
+                            <Grid fluid style={{ margin: '2%' }} >
                                 <Card
-                                    sx={{ minWidth: 280, maxWidth: 280, minHeight: 420, maxHeight: 420 }}
+                                    sx={{ minWidth: 280, maxWidth: 280, minHeight: 450, maxHeight: 450 }}
                                 >
                                     <CardMedia
                                         component="img"

@@ -28,7 +28,7 @@ const Header = () => {
                 {/* <p className='animate__animated animate__fadeInLeft'><span><MdOutlineLocalOffer /></span> Ofertas</p> */}
                 <p className='animate__animated animate__fadeInLeft'><span><MdOutlineFastfood /></span> Carta</p>
                 <p className='animate__animated animate__fadeInLeft'><span><BiMap /></span> Dónde estamos</p>
-                <p className='animate__animated animate__fadeInLeft'><span><AiOutlineShoppingCart /></span> Mi pedido</p>
+                <p className='animate__animated animate__fadeInLeft' onClick={() =>{setShowCart(!showCart)}}><span><AiOutlineShoppingCart /></span> Mi pedido</p>
             </div>
         }
         </div>
