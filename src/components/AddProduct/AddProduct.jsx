@@ -1,24 +1,13 @@
-export const AddProductToCart = (product) => {
+export const AddProductToCart = ([product]) => {
 
-    let index = product.indexOf(":")
-    const name = product.substring(0, index)
-    console.log(name) //Nombre producto
-
-    let sizeIndex = product.indexOf(",")
-    const size = product.substring(index +1, sizeIndex);
-    console.log(size) //Tamaño
-
-    let indexPrice = product.indexOf("€")
-    const price = product.substring(sizeIndex +1, indexPrice);
-    console.log(price) //Precio
-
-    if(name && size && price){
+    if(product){
         let items = {
-            name: name,
-            size: size,
-            price: Number(price)
+            name: product.name,
+            size: product.size,
+            price: product.price * product.quantity,
+            quantity: product.quantity
         }
-        console.log(typeof(items.price))
+        console.log(items)
 
         let itemsList = []
 

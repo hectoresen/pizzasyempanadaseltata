@@ -18,9 +18,9 @@ function App() {
         <section className='eltata__content-makeorder'>
           <MakeOrder />
         </section>
-        <section className='eltata__content-whereweare'>
+{/*         <section className='eltata__content-whereweare'>
           <WhereWeAre />
-        </section>
+        </section> */}
       </main>
 
     </div>
