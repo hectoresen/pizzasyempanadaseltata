@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Modal, Input, Row, Checkbox, Button, Text, Card } from "@nextui-org/react";
-import { FaPizzaSlice } from 'react-icons/fa';
-import { BsWhatsapp } from 'react-icons/bs';
-import { MdOutlineDelete } from 'react-icons/md';
+import React, { useEffect, useState } from "react"
+import { Modal, Input, Row, Checkbox, Button, Text, Card } from "@nextui-org/react"
+import { FaPizzaSlice } from 'react-icons/fa'
+import { BsWhatsapp } from 'react-icons/bs'
+import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import './Cart.scss'
 
 
@@ -20,17 +20,31 @@ const CartModal = ({ showContain }) => {
             setVisible(false)
         }
 
-    }, [showContain])
-
-    useEffect(() => {
         let items = JSON.parse(localStorage.getItem('productsList'))
         setCartList(items)
-    }, [])
+    }, [showContain])
 
-    const handler = () => setVisible(true);
-    const closeHandler = () => {
-        setVisible(false);
-        console.log("closed");
+    const closeHandler = () => setVisible(false)
+
+    const productToDelete = product =>{
+        DeleteProduct(product)
+        setCartList(JSON.parse(localStorage.getItem('productsList')))
+    }
+
+    const showProducts = () =>{
+        if(cartList) {
+            return cartList.map(element => {
+                totalPrice += element.price;
+                return <div className="resume__card" key={element.name}>
+                    <Card isHoverable variant="bordered" style={{'marginTop': '10px', 'padding': '1%', 'alignItems': 'center',}}>
+                        <Text size={15}>
+                            <span style={{ 'color': 'orange' }}>{element.name}</span>, Tamaño: <span style={{ 'color': 'orange' }}>{element.size}</span>, Cantidad: <span style={{ 'color': 'orange' }}>{element.quantity}</span>
+                        </Text>
+                        <Button size="xs" color='secondary' onPress={() =>productToDelete(element)}> Eliminar </Button>
+                    </Card>
+                </div>
+            })
+        }
     }
 
     return (
@@ -53,21 +67,7 @@ const CartModal = ({ showContain }) => {
                 <Modal.Body>
                     <div className="resume">
                         {
-                            (cartList.length)
-                                ?
-                                cartList.map(element => {
-                                    totalPrice += element.price;
-                                    return <div className="resume__card" key={element.name}>
-                                        <Card isHoverable variant="bordered" style={{'marginTop': '10px', 'padding': '1%', 'alignItems': 'center',}}>
-                                            <Text size={15}>
-                                                <span style={{ 'color': 'orange' }}>{element.name}</span>, Tamaño: <span style={{ 'color': 'orange' }}>{element.size}</span>, Cantidad: <span style={{ 'color': 'orange' }}>{element.quantity}</span>
-                                            </Text>
-                                            <Button size="xs" color='secondary'> Eliminar </Button>
-                                        </Card>
-                                    </div>
-                                })
-                                :
-                                ''
+                            showProducts()
                         }
                         <Text size={14}>Total: {totalPrice} €</Text>
                     </div>

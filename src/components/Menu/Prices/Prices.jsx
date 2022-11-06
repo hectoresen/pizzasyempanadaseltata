@@ -1,10 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
-import { Dropdown } from "@nextui-org/react";
-import { Pagination } from '@nextui-org/react';
-import { Button, Grid, Text } from "@nextui-org/react";
-import { AddProductToCart } from '../../AddProduct/AddProduct';
-import './Prices.scss';
+import React from 'react'
+import { useState } from 'react'
+import { Dropdown } from "@nextui-org/react"
+import { Pagination } from '@nextui-org/react'
+import { Button, Grid, Text } from "@nextui-org/react"
+import { AddProductToCart } from '../../AddProduct/AddProduct'
+import './Prices.scss'
 
 const Prices = (props) => {
     const [selected, setSelected] = useState({})

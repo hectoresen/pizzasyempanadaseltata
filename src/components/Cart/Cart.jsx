@@ -1,6 +1,6 @@
-import React from 'react';
-import CartModal from './Cart-Modal';
-import './Cart.scss';
+import React from 'react'
+import CartModal from './Cart-Modal'
+import './Cart.scss'
 
 const Cart = ({showContain}) => {
 
@@ -10,7 +10,6 @@ const Cart = ({showContain}) => {
             ?
             <div className='cart__contain'>
                 <CartModal showContain={showContain} />
-                {/* GET CART CONTENT */}
             </div>
             :
             ''
