@@ -3,6 +3,7 @@
     display: flex;
     max-height: 10vh;
     background-image: linear-gradient(to right top, #26201c, #29221f, #2d2521, #302724, #342a27);
+    background-color: rgba(49,49,49, 1);
     color: white;
     &__logo{
         width: 20%;
@@ -85,7 +86,7 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                color: #2A231F;
+                color: white;
                 &-btn{
                     margin-top: 5%;
                     font-size: 2rem;
@@ -97,7 +98,7 @@
                     text-align: center;
                     width: 100%;
                     p {
-                        color: black;
+                        color: white;
                         width: 100vw;
                         height: 100%;
                         font-size: 1.15rem;
