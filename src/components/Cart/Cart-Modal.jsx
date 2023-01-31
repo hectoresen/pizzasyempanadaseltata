@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { Modal, Input, Checkbox, Button, Text, Card } from "@nextui-org/react"
-import { BsWhatsapp } from 'react-icons/bs'
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
-import './Cart.scss'
 import { sendOrder } from "./order/order"
+import { BsWhatsapp } from 'react-icons/bs'
+import './Cart.scss'
 
 
 const CartModal = ({ showContain }) => {
