@@ -12,8 +12,9 @@ import {CgCloseO} from 'react-icons/cg';
 import './Menu.scss';
 
 const Menu = () => {
-    const [showItems, setShowItems] = useState('');
-
+    const [showItems, setShowItems] = useState('pizza');
+//menu__nav__items-item-selected
+const test = ``
     return (
         <div className='menu'>
             <div className='menu__header'>
@@ -24,15 +25,15 @@ const Menu = () => {
             <div className='menu__intro'>¿Qué te apetece hoy?</div>
             <div className='menu__nav'>
                 <div className='menu__nav__items'>
-                    <div className='menu__nav__items-item' onClick={() =>{setShowItems('pizza')}}>
+                    <div className={(showItems === 'pizza') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() =>{setShowItems('pizza')}}>
                         <img src={navPizza} alt='Pizza logo'></img>
                         Pizzas
                     </div>
-                    <div className='menu__nav__items-item'  onClick={() =>{setShowItems('patty')}}>
+                    <div className={(showItems === 'patty') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'}  onClick={() =>{setShowItems('patty')}}>
                         <img src={navPatty} alt='Empanadas logo'></img>
                         Empanadas
                     </div>
-                    <div className='menu__nav__items-item' onClick={() =>{setShowItems('desserts')}}>
+                    <div className={(showItems === 'desserts') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() =>{setShowItems('desserts')}}>
                         <img src={navDesserts} alt='Postres logo'></img>
                         Postres
                     </div>

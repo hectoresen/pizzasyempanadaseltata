@@ -68,6 +68,7 @@ const Prices = (props) => {
                     shadow
                     color="secondary"
                     auto
+                    disabled={!selected.price}
                     onPress={() => { AddProductToCart([{...selected, quantity: productQuantity}])}}
                 >
                     Añadir

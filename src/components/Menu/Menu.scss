@@ -54,6 +54,22 @@
                     width: 20%;
                     height: 100%;
                 }
+                &-selected{
+                    height: 100%;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: orange;
+                    img {
+                        margin-right: 5%;
+                        width: 20%;
+                        height: 100%;
+                    }
+                }
+                &-selected:hover{
+                    cursor:not-allowed
+                }
             }
             &-item:hover{
                 cursor: pointer;
