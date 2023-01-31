@@ -3,13 +3,13 @@ import { Modal, Input, Checkbox, Button, Text, Card } from "@nextui-org/react"
 import { BsWhatsapp } from 'react-icons/bs'
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import './Cart.scss'
+import { sendOrder } from "./order/order"
 
 
 const CartModal = ({ showContain }) => {
     const [visible, setVisible] = React.useState(false)
     const [cartList, setCartList] = useState([]);
-    const [productMessage, setProductMessage] = useState()
-    const [orderOptions, setOrderOptions] = useState({ toSend: false, toPickUp: false })
+    const [orderOptions, setOrderOptions] = useState({ toSend: false, toPickUp: false, address: '' });
 
     let totalPrice = 0;
 
@@ -73,6 +73,18 @@ const CartModal = ({ showContain }) => {
         }
     }
 
+    const sendDataOrder = order => {
+        sendOrder(order)
+        closeHandler()
+    }
+
+    const handleAddress = event => {
+        setOrderOptions({
+            ...orderOptions,
+            address: event.target.value
+        })
+    }
+
     return (
         <div>
             <Modal
@@ -112,6 +124,7 @@ const CartModal = ({ showContain }) => {
                                         color="secondary"
                                         size="lg"
                                         placeholder="Calle, piso, puerta y letra si es necesario"
+                                        onChange={handleAddress}
                                     />
                                 </div>
                                 <div>
@@ -143,10 +156,10 @@ const CartModal = ({ showContain }) => {
                         Volver atrás
                     </Button>
                     <Button auto
-                        onClick={closeHandler}
+                        onClick={() => sendDataOrder({options: orderOptions, products: cartList})}
                         color='success'
                         disabled={
-                            (!orderOptions.toSend && !orderOptions.toPickUp) || ((totalPrice < 8 && orderOptions.toSend) || ((totalPrice == 0) && (orderOptions.toPickUp)))
+                            (!orderOptions.toSend && !orderOptions.toPickUp) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length <6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
                         }>
                         <Text>Pedir ya &nbsp; </Text>
                         <BsWhatsapp />

@@ -4,10 +4,9 @@ export const AddProductToCart = ([product]) => {
         let items = {
             name: product.name,
             size: product.size,
-            price: product.price * product.quantity,
+            price: Math.trunc(product.price * product.quantity),
             quantity: product.quantity
         }
-        console.log(items)
 
         let itemsList = []
 
