@@ -5,6 +5,7 @@ import MakeOrder from "./MakeOrder/MakeOrder"
 import WhereWeAre from "./WhereWeAre/WhereWeAre"
 import Cart from "./Cart/Cart"
 import FoodCard from "./FoodCard/FoodCard"
+import CartIcon from "./CartIcon/CartIcon"
 import {DeleteProduct} from "./DeleteProduct/DeleteProduct.jsx"
 
 export {
@@ -15,5 +16,6 @@ export {
     WhereWeAre,
     Cart,
     FoodCard,
-    DeleteProduct
+    DeleteProduct,
+    CartIcon
 }

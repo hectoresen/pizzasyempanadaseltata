@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Dropdown } from "@nextui-org/react"
 import { Pagination } from '@nextui-org/react'
 import { Button, Grid, Text } from "@nextui-org/react"
 import { AddProductToCart } from '../../AddProduct/AddProduct'
 import './Prices.scss'
+import { CountCartItemsContext } from '../../../context/cart-items-count'
 
 const Prices = (props) => {
     const [selected, setSelected] = useState({})
     const [showSelected, setShowSelected] = useState('Tamaño')
     const [productQuantity, setProductQuantity] = useState(1)
+    const [items, setItems] = useContext(CountCartItemsContext)
 
     const handleDataProduct = (data) => {
 
@@ -69,7 +71,10 @@ const Prices = (props) => {
                     color="secondary"
                     auto
                     disabled={!selected.price}
-                    onPress={() => { AddProductToCart([{...selected, quantity: productQuantity}])}}
+                    onPress={() => { 
+                        AddProductToCart([{...selected, quantity: productQuantity}])
+                        setItems(items + 1)
+                    }}
                 >
                     Añadir
                 </Button>

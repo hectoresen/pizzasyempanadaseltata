@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Modal, Input, Checkbox, Button, Text, Card } from "@nextui-org/react"
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import { sendOrder } from "./order/order"
 import { BsWhatsapp } from 'react-icons/bs'
 import './Cart.scss'
+import { CountCartItemsContext } from "../../context/cart-items-count"
 
 
 const CartModal = ({ showContain }) => {
     const [visible, setVisible] = React.useState(false)
     const [cartList, setCartList] = useState([]);
     const [orderOptions, setOrderOptions] = useState({ toSend: false, toPickUp: false, address: '' });
-
+    const [items, setItems] = useContext(CountCartItemsContext)
     let totalPrice = 0;
 
     useEffect(() => {
@@ -29,6 +30,7 @@ const CartModal = ({ showContain }) => {
     const productToDelete = product => {
         DeleteProduct(product)
         setCartList(JSON.parse(localStorage.getItem('productsList')))
+        setItems(items - 1)
     }
 
     const miniumShippingPrice = total => {

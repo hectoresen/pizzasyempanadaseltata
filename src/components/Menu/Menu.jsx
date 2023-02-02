@@ -10,6 +10,7 @@ import Patty from './Patty/Patty';
 import Desserts from './Desserts/Desserts';
 import {CgCloseO} from 'react-icons/cg';
 import './Menu.scss';
+import CartIcon from '../CartIcon/CartIcon';
 
 const Menu = () => {
     const [showItems, setShowItems] = useState('pizza');
@@ -63,6 +64,9 @@ const test = ``
                     <Desserts />
                 </div>
                 }
+            </div>
+            <div className='menu__carticon'>
+                <CartIcon />
             </div>
         </div>
     )
