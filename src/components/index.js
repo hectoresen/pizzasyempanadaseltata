@@ -8,6 +8,7 @@ import FoodCard from "./FoodCard/FoodCard"
 import CartIcon from "./CartIcon/CartIcon"
 import Footer from "./Footer/Footer"
 import {DeleteProduct} from "./DeleteProduct/DeleteProduct.jsx"
+import Drinks from "./Menu/Drinks/Drinks"
 
 export {
     Header,
@@ -19,5 +20,6 @@ export {
     FoodCard,
     DeleteProduct,
     CartIcon,
-    Footer
+    Footer,
+    Drinks
 }

@@ -11,6 +11,7 @@ import Desserts from './Desserts/Desserts';
 import {CgCloseO} from 'react-icons/cg';
 import './Menu.scss';
 import CartIcon from '../CartIcon/CartIcon';
+import Drinks from './Drinks/Drinks';
 
 const Menu = () => {
     const [showItems, setShowItems] = useState('pizza');
@@ -38,7 +39,7 @@ const test = ``
                         <img src={navDesserts} alt='Postres logo'></img>
                         Postres
                     </div>
-                    <div className='menu__nav__items-item'>
+                    <div className={(showItems === 'drinks') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() => {setShowItems('drinks')}}>
                         <img src={navDrinks} alt='Bedidas logo'></img>
                         Bebidas
                     </div>
@@ -62,6 +63,11 @@ const test = ``
                 {showItems === 'desserts' &&
                 <div className='menu__foodmenu-desserts'>
                     <Desserts />
+                </div>
+                }
+                {showItems === 'drinks' &&
+                <div className='menu__foodmenu-drinks'>
+                    <Drinks />
                 </div>
                 }
             </div>

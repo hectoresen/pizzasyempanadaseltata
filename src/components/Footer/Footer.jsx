@@ -17,13 +17,13 @@ const Footer = () => {
                         floating
                         className='m-1'
                         style={{ backgroundColor: '#3b5998' }}
-                        href='#!'
+                        href='https://www.facebook.com/people/Pizzas-y-Empanadas-El-Tata/100066526252267/'
                         role='button'
                     >
                         <MDBIcon fab icon='facebook-f' />
                     </MDBBtn>
 
-                    <MDBBtn
+{/*                     <MDBBtn
                         floating
                         className='m-1'
                         style={{ backgroundColor: '#55acee' }}
@@ -31,9 +31,9 @@ const Footer = () => {
                         role='button'
                     >
                         <MDBIcon fab icon='twitter' />
-                    </MDBBtn>
+                    </MDBBtn> */}
 
-                    <MDBBtn
+{/*                     <MDBBtn
                         floating
                         className='m-1'
                         style={{ backgroundColor: '#dd4b39' }}
@@ -41,35 +41,15 @@ const Footer = () => {
                         role='button'
                     >
                         <MDBIcon fab icon='google' />
-                    </MDBBtn>
+                    </MDBBtn> */}
                     <MDBBtn
                         floating
                         className='m-1'
                         style={{ backgroundColor: '#ac2bac' }}
-                        href='#!'
+                        href='https://www.instagram.com/eltatapizzasyempanadas/?igshid=YmMyMTA2M2Y%3D'
                         role='button'
                     >
                         <MDBIcon fab icon='instagram' />
-                    </MDBBtn>
-
-                    <MDBBtn
-                        floating
-                        className='m-1'
-                        style={{ backgroundColor: '#0082ca' }}
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab icon='linkedin-in' />
-                    </MDBBtn>
-
-                    <MDBBtn
-                        floating
-                        className='m-1'
-                        style={{ backgroundColor: '#333333' }}
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab icon='github' />
                     </MDBBtn>
                 </section>
             </MDBContainer>

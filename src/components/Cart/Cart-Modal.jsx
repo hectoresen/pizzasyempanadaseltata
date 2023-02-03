@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
-import { Modal, Input, Checkbox, Button, Text, Card } from "@nextui-org/react"
+import { Modal, Input, Checkbox, Button, Text, Card, Grid, Row } from "@nextui-org/react"
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import { sendOrder } from "./order/order"
 import { BsWhatsapp } from 'react-icons/bs'
 import './Cart.scss'
 import { CountCartItemsContext } from "../../context/cart-items-count"
+import { height } from "@mui/system"
 
 
 const CartModal = ({ showContain }) => {
@@ -64,14 +65,39 @@ const CartModal = ({ showContain }) => {
             return cartList.map(element => {
                 totalPrice += element.price;
                 return <div className="resume__card" key={element.name}>
-                    <Card isHoverable variant="bordered" style={{ 'marginTop': '10px', 'padding': '1%', 'alignItems': 'center', }}>
-                        <Text size={15}> 
-                            <span style={{ 'color': 'orange' }}>{element.name}</span>,
-                            Tamaño: <span style={{ 'color': 'orange' }}>{element.size}</span>, 
-                            Cantidad: <span style={{ 'color': 'orange' }}>{element.quantity}</span>,
-                            {(element.selector) ? `Relleno: ${<span style={{'color': 'orange'}}>{element.selector}</span>}` : ''}
-                        </Text>
-                        <Button size="xs" color='secondary' onPress={() => productToDelete(element)}> Eliminar </Button>
+                    <Card style={{ 'marginTop': '10px' }} css={{ p: "$6", mw: "280px" }}>
+                        <Card.Header>
+                            <img
+                                alt={element.name}
+                                src={element.img}
+                                width="80px"
+                                height="80px"
+                            />
+                            <Grid.Container css={{ pl: "$6" }}>
+                                <Grid xs={12}>
+                                    <Text h5 css={{ lineHeight: "$xs" }}>
+                                        {element.name}
+                                    </Text>
+                                </Grid>
+                                <Grid xs={12}>
+                                    <Text css={{ color: "$accents8" }}>
+                                        {`Tamaño ${element.size} 
+                                        Cantidad: ${element.quantity} `}
+                                        {
+                                            (element.selector) ? ` Relleno: ${element.selector}` : ''
+                                        }
+                                    </Text>
+                                </Grid>
+                            </Grid.Container>
+                        </Card.Header>
+                        <Card.Body css={{ py: "$2" }}>
+                            <Text>
+                                {element.ingredients}
+                            </Text>
+                        </Card.Body>
+                        <Card.Footer style={{justifyContent: "center"}}>
+                            <Button size="sm" color='secondary' onPress={() => productToDelete(element)}> Eliminar </Button>
+                        </Card.Footer>
                     </Card>
                 </div>
             })
@@ -115,7 +141,16 @@ const CartModal = ({ showContain }) => {
                         {
                             miniumShippingPrice(totalPrice)
                         }
-                        <Text size={14}>Total: {totalPrice} €</Text>
+                        <div className="resume__total">
+                            <Card css={{ $$cardColor: '$colors$success', width: '200px', height: 'min-content' }}>
+                                <Card.Body>
+                                    <Row justify="center" align="center">
+                                        <Text size={16} color="white">Total: {totalPrice} €</Text>
+                                    </Row>
+                                </Card.Body>
+                            </Card>
+                        </div>
+
                     </div>
                     {
                         ((orderOptions.toSend) && (totalPrice > 8))
@@ -156,15 +191,15 @@ const CartModal = ({ showContain }) => {
                     <Checkbox onChange={() => { setOrderOptions({ ...orderOptions, toSend: !orderOptions.toSend }) }}>A domicilio</Checkbox>
                     <Checkbox onChange={() => { setOrderOptions({ ...orderOptions, toPickUp: !orderOptions.toPickUp }) }}>Para recoger</Checkbox>
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer justify="center">
                     <Button auto flat color="error" onClick={closeHandler}>
                         Volver atrás
                     </Button>
                     <Button auto
-                        onClick={() => sendDataOrder({options: orderOptions, products: cartList})}
+                        onClick={() => sendDataOrder({ options: orderOptions, products: cartList })}
                         color='success'
                         disabled={
-                            (!orderOptions.toSend && !orderOptions.toPickUp) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length <6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
+                            (!orderOptions.toSend && !orderOptions.toPickUp) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length < 6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
                         }>
                         <Text>Pedir ya &nbsp; </Text>
                         <BsWhatsapp />

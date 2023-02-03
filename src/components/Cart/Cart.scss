@@ -4,4 +4,10 @@
         align-items: center;
         justify-content: center;
     }
+    &__total{
+        max-height: 5%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
 }

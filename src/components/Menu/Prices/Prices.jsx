@@ -13,8 +13,10 @@ const Prices = (props) => {
     const [showSelected, setShowSelected] = useState('Tamaño')
     const [showSelector, setShowSelector] = useState('Relleno')
     const [productQuantity, setProductQuantity] = useState(1)
+    const [filling, setFilling] = useState(false)
     const [items, setItems] = useContext(CountCartItemsContext)
 
+    console.log(props)
     const handleDataProduct = (data) => {
 
         //Show product on selector
@@ -35,6 +37,7 @@ const Prices = (props) => {
     }
     const handleSelector = data => {
         setShowSelector(data.currentKey)
+        setFilling(data.currentKey)
     }
 
     return <div className='products__prices'>
@@ -103,7 +106,7 @@ const Prices = (props) => {
                     auto
                     disabled={!selected.price}
                     onPress={() => {
-                        AddProductToCart([{ ...selected, quantity: productQuantity, selector: showSelector }])
+                        AddProductToCart([{ ...selected, quantity: productQuantity, selector: filling, ingredients: props.ingredients, img: props.img }])
                         setItems(items + 1)
                     }}
                 >

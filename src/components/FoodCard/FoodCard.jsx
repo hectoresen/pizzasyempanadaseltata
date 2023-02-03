@@ -42,6 +42,8 @@ const FoodCard = ({ food }) => {
                                             productPrices={element.prices}
                                             productName={element.name}
                                             productSelector={element.selector}
+                                            ingredients={element.ingredients}
+                                            img={element.img}
                                         />
                                     </CardContent>
                                 </Card>

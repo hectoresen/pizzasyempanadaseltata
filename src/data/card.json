@@ -7,14 +7,14 @@
             "selector": ["Nocilla", "Miel", "Dulce de leche"],
             "prices": [
                 {
-                    "Unidad": "1 €"
+                    "Unidad": "1.5 €"
                 }
             ]
         },
         {
             "name": "Alfajores",
             "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
-            "ingredients" : "",
+            "ingredients" : "Alfajor de Maicena",
             "prices": [
                 {
                     "Unidad": "2 €"
@@ -27,7 +27,7 @@
             "ingredients" : "",
             "prices": [
                 {
-                    "Unidad": "1.50 €"
+                    "Unidad": "1.5 €"
                 }
             ]
         },
@@ -203,6 +203,48 @@
                     "Porción" : "2 €",
                     "Mediana": "9.50 €",
                     "Grande" : "12.20 €"
+                }
+            ]
+        }
+    ],
+    "drinksList": [
+        {
+            "name": "Coca-Cola",
+            "img": "https://tabernadospena.com/332-large_default/coca-cola-lata-33-cl.jpg",
+            "ingredients" : "Lata 330ml",
+            "prices": [
+                {
+                    "Unidad" : "1.80 €"
+                }
+            ]
+        },
+        {
+            "name": "Aquarius Limón",
+            "img": "https://tienda.copima.es/24848-large_default/aquarius-limon-lata-33cl-pack-8-latas.jpg",
+            "ingredients" : "Lata 330ml",
+            "prices": [
+                {
+                    "Unidad" : "1.80 €"
+                }
+            ]
+        },
+        {
+            "name": "Estrella Galicia",
+            "img": "https://ekonomatohostelero.com/wp-content/uploads/2020/03/419026.jpg",
+            "ingredients" : "Lata 330ml",
+            "prices": [
+                {
+                    "Unidad" : "1.80 €"
+                }
+            ]
+        },
+        {
+            "name": "Agua",
+            "img": "https://ekonomatohostelero.com/wp-content/uploads/2019/11/410002-1.jpg",
+            "ingredients" : "Pequeña 500 ml",
+            "prices": [
+                {
+                    "Unidad" : "1.80 €"
                 }
             ]
         }
