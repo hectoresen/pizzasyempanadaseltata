@@ -3,9 +3,9 @@ import { Modal, Input, Checkbox, Button, Text, Card, Grid, Row } from "@nextui-o
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import { sendOrder } from "./order/order"
 import { BsWhatsapp } from 'react-icons/bs'
-import './Cart.scss'
 import { CountCartItemsContext } from "../../context/cart-items-count"
-import { height } from "@mui/system"
+import PaymentMethod from "../PaymenMethod/PaymentMethod"
+import './Cart.scss'
 
 
 const CartModal = ({ showContain }) => {
@@ -176,6 +176,10 @@ const CartModal = ({ showContain }) => {
                                         size="lg"
                                         placeholder="¿Algún comentario adicional?"
                                     />
+                                </div>
+                                <div>
+                                    {/* Si este contexto no tiene método elegido no permitir pedido a domicilio */}
+                                    <PaymentMethod />
                                 </div>
                             </div>
                             :
