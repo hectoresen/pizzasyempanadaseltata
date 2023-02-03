@@ -28,19 +28,19 @@ const test = ``
             <div className='menu__nav'>
                 <div className='menu__nav__items'>
                     <div className={(showItems === 'pizza') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() =>{setShowItems('pizza')}}>
-                        <img src={navPizza} alt='Pizza logo'></img>
+                        <img src={navPizza} alt='Pizzas el tata'></img>
                         Pizzas
                     </div>
                     <div className={(showItems === 'patty') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'}  onClick={() =>{setShowItems('patty')}}>
-                        <img src={navPatty} alt='Empanadas logo'></img>
+                        <img src={navPatty} alt='Empanadas el tata'></img>
                         Empanadas
                     </div>
                     <div className={(showItems === 'desserts') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() =>{setShowItems('desserts')}}>
-                        <img src={navDesserts} alt='Postres logo'></img>
+                        <img src={navDesserts} alt='Postres el tata'></img>
                         Postres
                     </div>
                     <div className={(showItems === 'drinks') ? 'menu__nav__items-item-selected' : 'menu__nav__items-item'} onClick={() => {setShowItems('drinks')}}>
-                        <img src={navDrinks} alt='Bedidas logo'></img>
+                        <img src={navDrinks} alt='Bedidas el tata'></img>
                         Bebidas
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const test = ``
                 {showItems.length >1 &&
                 <span className='menu__foodmenu-close' onClick={() =>{setShowItems('')}}> <CgCloseO /></span>
                 }
-                
+
                 {showItems === 'pizza' &&
                 <div className='menu__foodmenu-pizza'>
                     <Pizza />
