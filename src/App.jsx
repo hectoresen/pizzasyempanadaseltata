@@ -1,4 +1,4 @@
-import { CarouselIntro, Cart, Header, MakeOrder, Menu, WhereWeAre } from './components';
+import { CarouselIntro, Cart, Footer, Header, MakeOrder, Menu, WhereWeAre } from './components';
 import './App.scss';
 
 function App() {
@@ -15,14 +15,16 @@ function App() {
         <section className='eltata__content-menu' id='eltata__content-menu'>
           <Menu />
         </section>
-        <section className='eltata__content-makeorder'>
+{/*         <section className='eltata__content-makeorder'>
           <MakeOrder />
-        </section>
-{/*         <section className='eltata__content-whereweare'>
-          <WhereWeAre />
         </section> */}
+        <section className='eltata__content-whereweare'>
+          <WhereWeAre />
+        </section>
       </main>
-
+      <footer className='eltata__footer'>
+        <Footer />
+      </footer>
     </div>
   );
 }

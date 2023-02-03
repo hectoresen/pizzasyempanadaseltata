@@ -1,6 +1,7 @@
 .eltata{
     width: 100%;
     height: 100%;
+    position: relative;
     &__header{
         width: 100%;
     }
@@ -19,13 +20,33 @@
         }
         &-whereweare{
             margin-top: 5%;
+            margin-bottom: 13%;
+            height: 30%;
             width: 100%;
             display: flex;
             justify-content: center;
         }
     }
+    &__footer{
+        margin-top: 10%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 3%;
+        background-image: linear-gradient(to right top, #26201c, #29221f, #2d2521, #302724, #342a27);
+        background-color: rgba(49,49,49, 1);
+    }
 }
 
+@media screen and (max-width: 769px) {
+    .eltata{
+        &__content{
+            &-whereweare{
+                margin-bottom: 20%;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 480px) {
     .eltata{
@@ -33,6 +54,13 @@
             &-carousel{
                 display: none;
             }
+            &-whereweare{
+                margin-bottom: 25%;
+            }
+        }
+        &__footer{
+            height: 2%;
         }
     }
 }
+

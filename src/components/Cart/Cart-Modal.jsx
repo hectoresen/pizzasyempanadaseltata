@@ -65,8 +65,11 @@ const CartModal = ({ showContain }) => {
                 totalPrice += element.price;
                 return <div className="resume__card" key={element.name}>
                     <Card isHoverable variant="bordered" style={{ 'marginTop': '10px', 'padding': '1%', 'alignItems': 'center', }}>
-                        <Text size={15}>
-                            <span style={{ 'color': 'orange' }}>{element.name}</span>, Tamaño: <span style={{ 'color': 'orange' }}>{element.size}</span>, Cantidad: <span style={{ 'color': 'orange' }}>{element.quantity}</span>
+                        <Text size={15}> 
+                            <span style={{ 'color': 'orange' }}>{element.name}</span>,
+                            Tamaño: <span style={{ 'color': 'orange' }}>{element.size}</span>, 
+                            Cantidad: <span style={{ 'color': 'orange' }}>{element.quantity}</span>,
+                            {(element.selector) ? `Relleno: ${<span style={{'color': 'orange'}}>{element.selector}</span>}` : ''}
                         </Text>
                         <Button size="xs" color='secondary' onPress={() => productToDelete(element)}> Eliminar </Button>
                     </Card>

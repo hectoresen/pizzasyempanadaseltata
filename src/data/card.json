@@ -4,6 +4,7 @@
             "name": "Filloas rellenas",
             "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
             "ingredients" : "Miel, nutella, dulce de leche..",
+            "selector": ["Nocilla", "Miel", "Dulce de leche"],
             "prices": [
                 {
                     "Unidad": "1 €"

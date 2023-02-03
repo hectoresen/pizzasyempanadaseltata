@@ -6,6 +6,7 @@ import WhereWeAre from "./WhereWeAre/WhereWeAre"
 import Cart from "./Cart/Cart"
 import FoodCard from "./FoodCard/FoodCard"
 import CartIcon from "./CartIcon/CartIcon"
+import Footer from "./Footer/Footer"
 import {DeleteProduct} from "./DeleteProduct/DeleteProduct.jsx"
 
 export {
@@ -17,5 +18,6 @@ export {
     Cart,
     FoodCard,
     DeleteProduct,
-    CartIcon
+    CartIcon,
+    Footer
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "@mui/material/Card"
-import CardActions from "@mui/material/CardActions"
+import Dropdown from "@nextui-org/react"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Typography from "@mui/material/Typography"
@@ -17,11 +17,11 @@ const FoodCard = ({ food }) => {
                         return (
                             <Grid fluid style={{ margin: '2%' }} >
                                 <Card
-                                    sx={{ minWidth: 280, maxWidth: 280, minHeight: 450, maxHeight: 450 }}
+                                    sx={{ minWidth: 280, maxWidth: 280, minHeight: 495, maxHeight: 495 }}
                                 >
                                     <CardMedia
                                         component="img"
-                                        height="150"
+                                        height="155"
                                         image={element.img}
                                         alt="el tata food"
                                     />
@@ -41,6 +41,7 @@ const FoodCard = ({ food }) => {
                                         <Prices
                                             productPrices={element.prices}
                                             productName={element.name}
+                                            productSelector={element.selector}
                                         />
                                     </CardContent>
                                 </Card>

@@ -9,6 +9,11 @@
         border-top: 2px solid black;
     }
     &__map{
+        width: 100%;
         margin-top: 5%;
+        &-frame{
+            width: 50%;
+            height: 361px;
+        }
     }
 }

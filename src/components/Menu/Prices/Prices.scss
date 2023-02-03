@@ -1,11 +1,17 @@
-.products__prices{
-    margin-top: 10%;
+.products__prices {
+    margin-top: 5%;
     width: 100%;
     display: flex;
     flex-direction: column;
-/*     border: 1px solid red; */
+    /*     border: 1px solid red; */
+    &-selector {
+        margin-top: 2%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-.productNameSelected{
+.productNameSelected {
     display: none;
 }

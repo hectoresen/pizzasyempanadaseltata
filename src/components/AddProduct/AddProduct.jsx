@@ -5,6 +5,7 @@ export const AddProductToCart = ([product]) => {
         let items = {
             name: product.name,
             size: product.size,
+            selector: product.selector,
             price: product.price * product.quantity,
             quantity: product.quantity
         }
