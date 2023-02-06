@@ -1,4 +1,4 @@
-import { CarouselIntro, Cart, Footer, Header, MakeOrder, Menu, WhereWeAre } from './components';
+import { CarouselIntro, Cart, CookieWarning, Footer, Header, MakeOrder, Menu, WhereWeAre } from './components';
 import './App.scss';
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
       <footer className='eltata__footer'>
         <Footer />
       </footer>
+      <div className='eltata__cookies'><CookieWarning /></div>
     </div>
   );
 }

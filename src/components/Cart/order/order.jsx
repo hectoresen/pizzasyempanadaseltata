@@ -16,6 +16,6 @@ export const sendOrder = (order) => {
       );
 
 
-    const url = `https://api.whatsapp.com/send?phone=666666666&text=${message}`;
+    const url = `https://api.whatsapp.com/send?phone=605649228&text=${message}`;
     window.open(url);
 }

@@ -10,6 +10,7 @@ import Footer from "./Footer/Footer"
 import {DeleteProduct} from "./DeleteProduct/DeleteProduct.jsx"
 import Drinks from "./Menu/Drinks/Drinks"
 import PaymentMethod from "./PaymenMethod/PaymentMethod"
+import CookieWarning from "./Cookies/Cookies"
 
 export {
     Header,
@@ -23,5 +24,6 @@ export {
     CartIcon,
     Footer,
     Drinks,
-    PaymentMethod
+    PaymentMethod,
+    CookieWarning
 }
