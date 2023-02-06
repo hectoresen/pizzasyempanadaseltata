@@ -65,7 +65,7 @@ const CartModal = ({ showContain }) => {
             return cartList.map(element => {
                 totalPrice += element.price;
                 return <div className="resume__card" key={element.name}>
-                    <Card style={{ 'marginTop': '10px' }} css={{ p: "$6", mw: "280px" }}>
+                    <Card style={{ 'marginTop': '10px', borderBottom: '1px solid black' }} css={{ p: "$6", mw: "280px" }}>
                         <Card.Header>
                             <img
                                 alt={element.name}
