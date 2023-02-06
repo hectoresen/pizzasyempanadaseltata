@@ -7,6 +7,5 @@ const isMorning = hours >= 10 && hours < 14;
 const isEvening = (hours >= 19 && hours < 24) || (hours >= 0 && hours < 10);
 
 export const calcScheduleLimit = () => {
-    //return (isWeekday && (isMorning || isEvening)) || (isWeekend && isEvening);
-    return true
+    return (isWeekday && (isMorning || isEvening)) || (isWeekend && isEvening);
 }
