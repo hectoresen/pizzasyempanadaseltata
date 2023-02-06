@@ -52,7 +52,8 @@ const CartModal = ({ showContain }) => {
     }
 
     const showProducts = () => {
-        if (cartList.length == 0) {
+
+        if ((!cartList) || (cartList.length == 0)) {
             return <div className="resume__card">
                 <Text size={15}>
                     No tienes productos añadidos
