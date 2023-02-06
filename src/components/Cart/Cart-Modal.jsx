@@ -152,7 +152,7 @@ const CartModal = ({ showContain }) => {
                             (!calcScheduleLimit()
                                 ?
                                 <div className="resume__card">
-                                        <Badge color="error" variant="flat">{`Nuestro horario es de Martes a Domingo`}</Badge>
+                                        <Badge color="error" variant="flat">{`Nuestro horario es de Lunes a Sabado`}</Badge>
                                         <Badge color="error" variant="flat">{`10:00 a 14:00 y de 19:30 a 22:00`}</Badge>
                                 </div>
                                 :
