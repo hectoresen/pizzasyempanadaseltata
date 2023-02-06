@@ -24,7 +24,7 @@ function CookieWarning() {
         auto 
         color="secondary" 
         rounded flat
-        onClick={handleAccept}
+        onPress={handleAccept}
         >
           Aceptar
         </Button>

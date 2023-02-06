@@ -214,7 +214,7 @@ const CartModal = ({ showContain }) => {
                         onClick={() => sendDataOrder({ options: orderOptions, products: cartList, paymentMethod: paymentMethods })}
                         color='success'
                         disabled={
-                            (!orderOptions.toSend && !orderOptions.toPickUp) || (paymentMethods === 'Método de pago' && orderOptions.toSend) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length < 6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
+                            (!orderOptions.toSend && !orderOptions.toPickUp) || (!calcScheduleLimit()) || (paymentMethods === 'Método de pago' && orderOptions.toSend) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length < 6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
                         }>
                         <Text>Pedir ya &nbsp; </Text>
                         <BsWhatsapp />
