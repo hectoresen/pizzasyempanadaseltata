@@ -16,7 +16,6 @@ export const AddProductToCart = ([product]) => {
 
         const checkDuplicateItems = () => {
             itemsList.map(product => {
-                console.log(product.name, items.name)
                 if ((product.name == items.name) && (product.size == items.size)) {
                     duplicatedItems = true;
                     product.quantity = product.quantity + items.quantity

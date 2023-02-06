@@ -3,7 +3,6 @@ import CartModal from './Cart-Modal'
 import './Cart.scss'
 
 const Cart = ({showContain}) => {
-    console.log(2)
 
     return (
         <div className='cart'>

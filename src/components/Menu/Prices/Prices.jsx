@@ -4,9 +4,8 @@ import { Dropdown } from "@nextui-org/react"
 import { Pagination } from '@nextui-org/react'
 import { Button, Grid, Text } from "@nextui-org/react"
 import { AddProductToCart } from '../../AddProduct/AddProduct'
-import './Prices.scss'
 import { CountCartItemsContext } from '../../../context/cart-items-count'
-import { useEffect } from 'react'
+import './Prices.scss'
 
 const Prices = (props) => {
     const [selected, setSelected] = useState({})
@@ -16,7 +15,6 @@ const Prices = (props) => {
     const [filling, setFilling] = useState(false)
     const [items, setItems] = useContext(CountCartItemsContext)
 
-    console.log(props)
     const handleDataProduct = (data) => {
 
         //Show product on selector

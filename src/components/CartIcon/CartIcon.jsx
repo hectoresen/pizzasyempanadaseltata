@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import './CartIcon.css'
 import { FaShoppingCart } from 'react-icons/fa'
 import { useState } from 'react'
 import Cart from '../Cart/Cart'
 import { useContext } from 'react'
 import { CountCartItemsContext } from '../../context/cart-items-count'
+import './CartIcon.css'
 
 const CartIcon = () => {
     const [showContain, setShowContain] = useState(false)
@@ -17,9 +17,9 @@ const CartIcon = () => {
 
     return (
         <>
-            <div class={(items < 1 ? "cart_none" : "cart")}>
-                <span class="count">{items}</span>
-                <i class="material-icons">
+            <div className={(items < 1 ? "cart_none" : "cart")}>
+                <span className="count">{items}</span>
+                <i className="material-icons">
                     <FaShoppingCart
                         className="icon"
                         size="45px"

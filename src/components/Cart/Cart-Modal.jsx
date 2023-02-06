@@ -1,18 +1,21 @@
 import React, { useContext, useEffect, useState } from "react"
-import { Modal, Input, Checkbox, Button, Text, Card, Grid, Row } from "@nextui-org/react"
+import { Modal, Input, Checkbox, Button, Text, Card, Grid, Row, Badge } from "@nextui-org/react"
 import { DeleteProduct } from "../DeleteProduct/DeleteProduct"
 import { sendOrder } from "./order/order"
 import { BsWhatsapp } from 'react-icons/bs'
 import { CountCartItemsContext } from "../../context/cart-items-count"
 import PaymentMethod from "../PaymenMethod/PaymentMethod"
+import { PaymenMethodContext } from "../../context/payment-method"
+import { calcScheduleLimit } from "./order/schedule-limit"
 import './Cart.scss'
 
 
 const CartModal = ({ showContain }) => {
     const [visible, setVisible] = React.useState(false)
     const [cartList, setCartList] = useState([]);
-    const [orderOptions, setOrderOptions] = useState({ toSend: false, toPickUp: false, address: '' });
+    const [orderOptions, setOrderOptions] = useState({ toSend: false, toPickUp: false, address: ''});
     const [items, setItems] = useContext(CountCartItemsContext)
+    const [paymentMethods, setPaymentMethods] = useContext(PaymenMethodContext)
     let totalPrice = 0;
 
     useEffect(() => {
@@ -37,16 +40,12 @@ const CartModal = ({ showContain }) => {
     const miniumShippingPrice = total => {
         if ((total < 8) && (orderOptions.toSend)) {
             return <div className="resume__card">
-                <Text size={15} color='error'>
-                    El pedido mínimo a domicilio es de 8 €
-                </Text>
+                <Badge color="error" variant="flat">El pedido mínimo a domicilio es de 8 €</Badge>
             </div>
         }
         if ((total == 0) && (orderOptions.toPickUp)) {
             return <div className="resume__card">
-                <Text size={15} color='error'>
-                    Debes añadir productos al carrito para hacer un pedido
-                </Text>
+                <Badge color="error" variant="flat">Debes añadir productos al carrito para hacer un pedido</Badge>
             </div>
 
         }
@@ -95,7 +94,7 @@ const CartModal = ({ showContain }) => {
                                 {element.ingredients}
                             </Text>
                         </Card.Body>
-                        <Card.Footer style={{justifyContent: "center"}}>
+                        <Card.Footer style={{ justifyContent: "center" }}>
                             <Button size="sm" color='secondary' onPress={() => productToDelete(element)}> Eliminar </Button>
                         </Card.Footer>
                     </Card>
@@ -112,7 +111,14 @@ const CartModal = ({ showContain }) => {
     const handleAddress = event => {
         setOrderOptions({
             ...orderOptions,
-            address: event.target.value
+            address: event.target.value,
+            paymentMethod: paymentMethods
+        })
+    }
+    const handleComments = event => {
+        setOrderOptions({
+            ...orderOptions,
+            comments: event.target.value
         })
     }
 
@@ -141,16 +147,20 @@ const CartModal = ({ showContain }) => {
                         {
                             miniumShippingPrice(totalPrice)
                         }
+                        {
+                            (!calcScheduleLimit()
+                                ?
+                                <div className="resume__card">
+                                        <Badge color="error" variant="flat">{`Nuestro horario es de Martes a Domingo`}</Badge>
+                                        <Badge color="error" variant="flat">{`10:00 a 14:00 y de 19:30 a 22:00`}</Badge>
+                                </div>
+                                :
+                                ''
+                            )
+                        }
                         <div className="resume__total">
-                            <Card css={{ $$cardColor: '$colors$success', width: '200px', height: 'min-content' }}>
-                                <Card.Body>
-                                    <Row justify="center" align="center">
-                                        <Text size={16} color="white">Total: {totalPrice} €</Text>
-                                    </Row>
-                                </Card.Body>
-                            </Card>
+                            <Badge color="success" variant="flat" size="lg" >Total: {totalPrice} €</Badge>
                         </div>
-
                     </div>
                     {
                         ((orderOptions.toSend) && (totalPrice > 8))
@@ -175,10 +185,10 @@ const CartModal = ({ showContain }) => {
                                         color="secondary"
                                         size="lg"
                                         placeholder="¿Algún comentario adicional?"
+                                        onChange={handleComments}
                                     />
                                 </div>
                                 <div>
-                                    {/* Si este contexto no tiene método elegido no permitir pedido a domicilio */}
                                     <PaymentMethod />
                                 </div>
                             </div>
@@ -200,10 +210,10 @@ const CartModal = ({ showContain }) => {
                         Volver atrás
                     </Button>
                     <Button auto
-                        onClick={() => sendDataOrder({ options: orderOptions, products: cartList })}
+                        onClick={() => sendDataOrder({ options: orderOptions, products: cartList, paymentMethod: paymentMethods })}
                         color='success'
                         disabled={
-                            (!orderOptions.toSend && !orderOptions.toPickUp) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length < 6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
+                            (!orderOptions.toSend && !orderOptions.toPickUp) || (paymentMethods === 'Método de pago' && orderOptions.toSend) || ((totalPrice < 8 && orderOptions.toSend) || (orderOptions.toSend && orderOptions.address.length < 6) || ((totalPrice == 0) && (orderOptions.toPickUp)))
                         }>
                         <Text>Pedir ya &nbsp; </Text>
                         <BsWhatsapp />
