@@ -7,12 +7,15 @@ export const sendOrder = (order) => {
         return `- ${product.name} - ${(product.selector) ? 'Relleno: ' + product.selector : ''} Tamaño: ${product.size} - Cantidad: ${product.quantity} Precio: ${product.price} \n`
       }).join("");
     
+    const payments = (paymentMethod === 'Método de pago') ? '' : `Método de pago:${paymentMethod}`
+    const comment = (comments == undefined) ? '' : `Comentarios adicionales ${comments}`
+    
       const message = encodeURIComponent(
         `[PEDIDO-WEB] - Deseo hacer un pedido, ${(!toSend) ? 'para recoger:' : 'a domicilio:'} \n
         ${productsList}
         Para la dirección: ${address} \n
-        Comentarios adicionales: ${comments} \n
-        Método de pago: ${paymentMethod}`
+        ${comment} \n
+        ${payments}`
       );
 
 
