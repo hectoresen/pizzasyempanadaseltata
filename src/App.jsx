@@ -10,7 +10,9 @@ function App() {
       </header>
       <main className='eltata__content'>
         <section className='eltata__content-carousel'>
-          <CarouselIntro />
+          <div className='eltata__content-carousel-box'>
+            <CarouselIntro />
+          </div>
         </section>
         <section className='eltata__content-menu' id='eltata__content-menu'>
           <Menu />

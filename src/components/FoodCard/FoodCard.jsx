@@ -1,14 +1,14 @@
 import React from "react"
 import Card from "@mui/material/Card"
-import Dropdown from "@nextui-org/react"
 import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Typography from "@mui/material/Typography"
 import { Grid } from "@nextui-org/react"
 import Prices from "../Menu/Prices/Prices"
+import { makeStyles } from "@mui/material"
 import "./FoodCard.scss"
-const FoodCard = ({ food }) => {
 
+const FoodCard = ({ food }) => {
     return (
         <div className="foodCard">
             <Grid.Container gap={0} justify="center" >

@@ -8,16 +8,52 @@
             background-position: center;
     }
         &-patty{
+            padding: 20px;
+            height: 450px;
             background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg');
         }
         &-pizza{
+            padding: 20px;
+            height: 450px;
             background-image: url('https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013');
         }
         &-desserts{
+            padding: 20px;
+            height: 450px;
             background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133577972502619/210115506_169364425252489_8581609915645560438_n.jpg');
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .carousel{
+        width: 100%;
+        height: 100%;
+        &__slides{
+            &-patty, &-pizza, &-desserts{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+        }
+            &-patty{
+                padding: 20px;
+                height: 350px;
+                background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133578282868807/209290430_169364441919154_6614498174943569325_n.jpg');
+            }
+            &-pizza{
+                padding: 20px;
+                height: 350px;
+                background-image: url('https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013');
+            }
+            &-desserts{
+                padding: 20px;
+                height: 350px;
+                background-image: url('https://cdn.discordapp.com/attachments/964479986855706624/1001133577972502619/210115506_169364425252489_8581609915645560438_n.jpg');
+            }
+        }
+    }
+}
+
 
 .slidebackground{
     position: fixed;
@@ -32,6 +68,5 @@
     opacity: 0;
     transition: opacity 0.3s linear, transform 0.3s ease-in-out;
     pointer-events: none;
-
     transform: translateX(calc(10% * var(--dir)));
 }

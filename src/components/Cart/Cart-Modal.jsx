@@ -8,6 +8,7 @@ import PaymentMethod from "../PaymenMethod/PaymentMethod"
 import { PaymenMethodContext } from "../../context/payment-method"
 import { calcScheduleLimit } from "./order/schedule-limit"
 import './Cart.scss'
+import { DeleteIcon } from "./icons/DeleteIcon"
 
 
 const CartModal = ({ showContain }) => {
@@ -65,7 +66,7 @@ const CartModal = ({ showContain }) => {
             return cartList.map(element => {
                 totalPrice += element.price;
                 return <div className="resume__card" key={element.name}>
-                    <Card style={{ 'marginTop': '10px', border: '1px solid gray' }} css={{ p: "$1", mw: "280px" }}>
+                    <Card style={{ 'marginTop': '10px' }} variant="flat" css={{ mw: "280px" }}>
                         <Card.Header>
                             <img
                                 alt={element.name}
@@ -96,7 +97,7 @@ const CartModal = ({ showContain }) => {
                             </Text>
                         </Card.Body>
                         <Card.Footer style={{ justifyContent: "center" }}>
-                            <Button size="sm" color='secondary' onPress={() => productToDelete(element)}> Eliminar </Button>
+                            <Button size="sm" color='secondary' iconRight={<DeleteIcon fill="currentColor" />} onPress={() => productToDelete(element)}> Eliminar </Button>
                         </Card.Footer>
                     </Card>
                 </div>
