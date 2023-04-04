@@ -2,7 +2,7 @@
     "dessertsList" : [
         {
             "name": "Filloas rellenas",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092761057140944916/filloas_rellenas.jpeg?width=631&height=504",
             "ingredients" : "Miel, nutella, dulce de leche..",
             "selector": ["Nocilla", "Miel", "Dulce de leche"],
             "prices": [
@@ -13,7 +13,7 @@
         },
         {
             "name": "Alfajores",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092758836328284221/Alfajor_de_Maicena.jpg?width=379&height=505",
             "ingredients" : "Alfajor de Maicena",
             "prices": [
                 {
@@ -23,7 +23,7 @@
         },
         {
             "name": "Tarta de ricotta",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092759327963631727/Tarta_de_Ricotta.jpg?width=673&height=505",
             "ingredients" : "",
             "prices": [
                 {
@@ -33,7 +33,7 @@
         },
         {
             "name": "Pasta frola",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092759151614099486/Pasta_Frola.jpg?width=379&height=505",
             "ingredients" : "",
             "prices": [
                 {
@@ -124,7 +124,7 @@
     "pizzaList": [
         {
             "name": "Maldonado",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092756094436249661/Maldonado.jpg?width=673&height=505",
             "ingredients" : "Mozarella, jamón serrano y pollo desmenuzado",
             "prices": [
                 {
@@ -134,7 +134,7 @@
         },
         {
             "name": "Rocha",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092756421638107146/Rocha_2.jpg?width=379&height=505",
             "ingredients" : "Mozarella, aceitunas y salchichón",
             "prices": [
                 {
@@ -144,7 +144,7 @@
         },
         {
             "name": "Paysandú",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092756782134329355/Paysandu_2.jpg?width=379&height=505",
             "ingredients" : "Mozarella, aceitunas, pimiento rojo y bacon",
             "prices": [
                 {
@@ -154,7 +154,7 @@
         },
         {
             "name": "Florida",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092756998480744468/Florida.jpg?width=379&height=505",
             "ingredients" : "Mozarella, queso de cabra, jamón serrano y tomate",
             "prices": [
                 {
@@ -164,7 +164,7 @@
         },
         {
             "name": "Montevideo",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092757178152128512/Montevideo_3.jpg?width=673&height=505",
             "ingredients" : "Quesos: Mozarella, emmental, oveja y cabra",
             "prices": [
                 {
@@ -174,7 +174,7 @@
         },
         {
             "name": "Vegetal",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092757626007334983/Vegetal.jpg?width=379&height=505",
             "ingredients" : "Mozarella, pimientos rojo, champiñones y aceitunas",
             "prices": [
                 {
@@ -184,7 +184,7 @@
         },
         {
             "name": "Vegana",
-            "img": "https://media.discordapp.net/attachments/964479986855706624/1001130394504134826/294085913_421775336678062_6956343524878210492_n.jpg?width=1013&height=1013",
+            "img": "https://media.discordapp.net/attachments/964479986855706624/1092757446281404497/Vegana_3.jpg?width=379&height=505",
             "ingredients" : "Mozarella vegana, champiñones, pimiento y cebolla",
             "prices": [
                 {
@@ -234,5 +234,8 @@
                 }
             ]
         }
-    ]
+    ],
+    "global-img": {
+        "pattyGlobal": "https://media.discordapp.net/attachments/964479986855706624/1092758362812317786/Empanada_4.jpg?width=673&height=505"
+    }
 }
